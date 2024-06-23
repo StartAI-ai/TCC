@@ -7,3 +7,25 @@ body {
     color:#f1f1f1 !important;
 }
 
+.scroll-container {
+    overflow-x: auto; /* Habilita a rolagem horizontal */
+  }
+  
+  /* Estilo específico para a barra de rolagem no Chrome e Edge */
+  .scroll-container::-webkit-scrollbar {
+    height: 8px; /* Altura da barra de rolagem */
+    background-color: #f1f1f1; /* Cor de fundo da barra de rolagem */
+  }
+  
+  .scroll-container::-webkit-scrollbar-thumb {
+    background-color: #ba8ccf; /* Cor do indicador da barra de rolagem */
+    border-radius: 4px; /* Borda arredondada do indicador */
+  }
+  
+  /* Pseudo-elemento para criar espaçamento no topo da barra de rolagem */
+  .scroll-container::before {
+    content: ''; /* Conteúdo vazio */
+    display: block; /* Exibe como bloco */
+    height: 8px; /* Altura do espaço */
+  }
+  

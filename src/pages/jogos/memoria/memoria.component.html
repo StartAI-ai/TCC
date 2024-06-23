@@ -1,0 +1,25 @@
+<div class="container memory-game">
+  <div class="row align-items-center justify-content-center vh-100">
+    <div class="col-12 col-md-6 d-flex flex-column align-items-start">
+      <div class="time mb-2">
+        <span>Tempo</span>
+        <div class="time-value">{{ minutes }}:{{ seconds | number:'2.0' }}</div>
+      </div>
+      <div class="moves mb-2">
+        <span>Movimentos</span>
+        <div class="moves-value">{{ moves }}</div>
+      </div>
+      <button type="button" class="btn roxo btn-lg btn-block w-25" (click)="resetGame()">Reiniciar</button>
+    </div>
+    <div class="col-12 col-md-6 d-flex flex-wrap justify-content-center">
+      <div *ngFor="let card of cards; let i = index" class="card m-12" (click)="flipCard(i)" [ngClass]="{ 'flipped': card.flipped }">
+        <div class="card-inner">
+          <div class="card-front">?</div>
+          <div class="card-back">
+            <img [src]="card.image" alt="Card Image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

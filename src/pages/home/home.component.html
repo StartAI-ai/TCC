@@ -1,1 +1,18 @@
+<div class="games">
+    <h4>JOGOS EM ALTA ESSA SEMANA</h4><br>
 
+    <div class="row flex-nowrap overflow-auto scroll-container">
+        <div class="col-3 game" *ngFor="let item of items">
+            <a href="{{ item.rota }}" class="game-link">
+                <div class="text-center">
+                    <div class="game-image-container">
+                        <img [src]="item.imageUrl" alt="Imagem do jogo" class="img-fluid h-100">
+                    </div>
+                </div>
+                <div class="text-center text-uppercase fs-5">
+                    {{ item.name }}
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,32 @@
+.games {
+    padding: 50px;
+}
 
+.game {
+    background-color: #F0F0F0;
+    border-radius: 10px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-right: 20px; 
+    padding: 10px; 
+    flex-shrink: 0; 
+    height: 250px;
+    margin-bottom: 20px;
+}
+
+.game-image-container {
+    max-width: 65%; 
+    margin: 0 auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.game-link {
+    text-decoration: none; 
+    color: inherit;
+}
+
+.game-link:hover {
+    color: inherit; 
+}
